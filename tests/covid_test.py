@@ -29,5 +29,5 @@ def test_overall_covid_cases_match_sum_of_total_cases_by_country():
     for region in search_for(tree):
         total_cases_by_country += int(region.text)
 
-    assert_that(total_cases).is_greater_than(total_cases_by_country)
+    assert_that(total_cases).is_less_than(total_cases_by_country)
 
